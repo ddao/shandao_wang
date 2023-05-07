@@ -1,1 +1,20 @@
-github pages
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>a.html</title>
+</head>
+<body>
+    <script>
+    //document.domain让当前的域进行降域，这样二者就可以实现相互操作和访问了。
+    document.domain = 'shandao.wang';
+    let ifr = document.createElement('iframe');
+    ifr.src = 'http://data.shandao.wang/index.html';
+    ifr.style.display = 'none';
+    document.body.append(ifr);
+    ifr.onload = function() {
+        let win = ifr.contentWindow;
+        alert(win.data);
+    }
+    </script>
+</body>
