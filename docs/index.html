@@ -9,7 +9,7 @@
     //document.domain让当前的域进行降域，这样二者就可以实现相互操作和访问了。
     document.domain = 'shandao.wang';
     let ifr = document.createElement('iframe');
-    ifr.src = 'https://data.shandao.wang:24950/';
+    ifr.src = 'http://data.shandao.wang:24950/index.html';
     ifr.style.display = 'none';
     document.body.append(ifr);
     ifr.onload = function() {
